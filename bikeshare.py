@@ -28,7 +28,11 @@ def get_filters():
     while month not in cities:
         month = input('Do you wish to filter by month? If not, type "All".\n').lower()
 
-    # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
+    # get user input for day of week (all, monday, tuesday, ... sunday)
+    days = ['all', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']
+    day = 0
+    while day not in days:
+        day = input('Do you wih to filter by day? If not, type "All". \n').lower()
 
 
     print('-'*40)
