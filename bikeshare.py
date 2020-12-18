@@ -30,7 +30,7 @@ def get_filters():
     # get user input for month (all, january, february, ... , june)
     months = ['all', 'january', 'february', 'march', 'april', 'may', 'june']
     month = 0
-    while month not in cities:
+    while month not in months:
         month = input('Do you wish to filter by month? If not, type "All".\n')
         
         if type(month) != str:
