@@ -21,10 +21,6 @@ def get_filters():
     city = 0
     while city not in cities:
         city = input('Which city are you looking to explore? Please, enter one of the 3 cities; Chicago, New York City, or Washington.\n')
-        
-        if type(city) != str:
-            print('Please, enter string only.')
-        
         city = city.lower()
 
     # get user input for month (all, january, february, ... , june)
@@ -32,21 +28,13 @@ def get_filters():
     month = 0
     while month not in months:
         month = input('Do you wish to filter by month? If not, type "All".\n')
-        
-        if type(month) != str:
-            print('Please, enter string only.')
-         
         month = month.lower()
 
     # get user input for day of week (all, monday, tuesday, ... sunday)
     days = ['all', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']
     day = 0
     while day not in days:
-        day = input('Do you wih to filter by day? If not, type "All". \n')
-        
-        if type(day) != str:
-            print('Please, enter string only.')
-            
+        day = input('Do you wih to filter by day? If not, type "All". \n')            
         day = day.lower()
 
 
