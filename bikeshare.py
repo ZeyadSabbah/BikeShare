@@ -22,8 +22,11 @@ def get_filters():
     while city not in cities:
         city = input('Which city are you looking to explore? Please, enter one of the 3 cities; Chicago, New York City, or Washington.\n').lower()
 
-    # TO DO: get user input for month (all, january, february, ... , june)
-
+    # get user input for month (all, january, february, ... , june)
+    months = ['all', 'january', 'february', 'march', 'april', 'may', 'june']
+    month = 0
+    while month not in cities:
+        month = input('Do you wish to filter by month? If not, type "All".\n').lower()
 
     # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
 
