@@ -178,7 +178,18 @@ def user_stats(city, df):
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
-
+    
+def display_data(df):
+    '''Displays data for users'''
+    start_loc = 0
+    view_data = input('Would you like to see the first 5 rows of data? Enter yes or no.\n').lower()
+    
+    while view_data == 'yes':
+        print(df.iloc[start_loc: start_loc + 5])
+        start_loc += 5
+        
+        view_data = input('Would you like to see the next 5 rows of data?\n').lower()
+    
 
 def main():
     while True:
@@ -189,6 +200,7 @@ def main():
         station_stats(df)
         trip_duration_stats(df)
         user_stats(city, df)
+        display_data(df)
 
         restart = input('\nWould you like to restart? Enter yes or no.\n')
         if restart.lower() != 'yes':
