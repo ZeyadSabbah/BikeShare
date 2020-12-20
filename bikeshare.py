@@ -27,7 +27,7 @@ def get_filters():
     months = ['all', 'january', 'february', 'march', 'april', 'may', 'june']
     month = 0
     while month not in months:
-        month = input('Do you wish to filter by month? If not, type "All".\n')
+        month = input('Do you wish to filter by month? Please, enter a month of the first half of the year. If not, type "All".\n')
         month = month.lower()
 
     # get user input for day of week (all, monday, tuesday, ... sunday)
@@ -53,6 +53,8 @@ def load_data(city, month, day):
     Returns:
         df - Pandas DataFrame containing city data filtered by month and day
     """
+    city = city.split(' ')
+    city = '_'.join(city)
     filename = city + '.csv'
     df = pd.read_csv(filename)
     
